@@ -1,0 +1,4 @@
+// bỏ thư mục
+.vscode
+
+node_module/
