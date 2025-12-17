@@ -1,0 +1,29 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "f8",
+    "blog",
+    "nodejs",
+    "expressjs"
+  ],
+  "homepage": "https://github.com/Kaitokid2001/nodejs_blog#readme",
+  "bugs": {
+    "url": "https://github.com/Kaitokid2001/nodejs_blog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaitokid2001/nodejs_blog.git"
+  },
+  "license": "ISC",
+  "author": "AKiet",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
