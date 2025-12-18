@@ -1,4 +1,5 @@
-// bỏ thư mục
-.vscode
+# bỏ thư mục
+# node_module/
 
-node_module/
+# bỏ tất cả các con của node_module
+**/node_modules/
