@@ -2,5 +2,5 @@
 # node_module/
 
 # bỏ tất cả các con của node_module
-public/css/
+src/public/css/
 **/node_modules/
