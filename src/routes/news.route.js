@@ -4,8 +4,8 @@ const route = express.Router();
 const newsController = require('../app/controllers/NewsController');
 
 // new children in /new in newctroller
-route.use('/:slug', newsController.show);
+route.get('/:slug', newsController.show);
 
-route.use('/', newsController.index);
+route.get('/', newsController.index);
 
 module.exports = route;
