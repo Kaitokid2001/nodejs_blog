@@ -20,12 +20,12 @@ app.use(morgan('combined'));
 db.connect();
 
 //middleware khi version express dưới 4.16 và add thêm body-parser
-// app.use(express.urlencoded(
-//   extended: true
-// ));
+app.use(express.urlencoded(
+  {extended: true}
+));
 
 // Gửi từ code js lên
-// app.use(express.json());
+app.use(express.json());
 
 // Template engine
 app.engine(
