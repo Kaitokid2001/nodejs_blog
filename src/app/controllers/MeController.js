@@ -1,0 +1,19 @@
+const {mutipleMongooseToObject} = require('../../util/mongoose');
+const Course = require('../models/Course');
+
+class MeController {
+    
+
+    // GET /me/stored/courses
+    storedCourses(req, res, next) {
+        Course.find({})
+            .then(courses => res.render('me/stored-courses', {
+                courses: mutipleMongooseToObject(courses)
+            }))
+            .catch(next)
+    }
+}
+
+// Tạo đối tượng new rồi trích xuất ra ngoài
+module.exports = new MeController();
+

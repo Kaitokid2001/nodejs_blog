@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const methodOverride = require('method-override');
 // Vs7
 const { engine } = require('express-handlebars');
 const app = express();
@@ -27,12 +28,18 @@ app.use(express.urlencoded(
 // Gửi từ code js lên
 app.use(express.json());
 
+// Add method override
+app.use(methodOverride('_method'));
+
 // Template engine
 app.engine(
     '.hbs',
     engine({
         // đổi tên miền sau cho ngắn lại
         extname: '.hbs',
+        helpers: {
+            sum: (a,b)=> a+b,
+        }
     }),
 );
 app.set('view engine', 'hbs');
