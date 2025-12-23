@@ -49,10 +49,26 @@ class CoursesController {
 
     //DELETE /courses/:id
     destroy(req, res, next){
+        Course.delete({_id: req.params.id})
+            .then(()=> res.redirect('/me/stored/courses'))
+            .catch(next)
+    }
+    
+    //PATH /courses/:id/force
+    forceDestroy(req, res, next){
         Course.deleteOne({_id: req.params.id})
             .then(()=> res.redirect('/me/stored/courses'))
             .catch(next)
     }
+
+    //PATH /courses/:id/restore
+    restore(req, res, next){
+        Course.restore({_id: req.params.id})
+            .then(()=> res.redirect('/me/stored/courses'))
+            .catch(next)
+    }
+
+
 }
 
 // Tạo đối tượng new rồi trích xuất ra ngoài

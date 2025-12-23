@@ -7,7 +7,9 @@ route.get('/create', coursesController.create);
 route.post('/store', coursesController.store);
 route.get('/:id/edit', coursesController.edit);
 route.put('/:id', coursesController.update);
+route.patch('/:id/restore', coursesController.restore);
 route.delete('/:id', coursesController.destroy);
+route.delete('/:id/force', coursesController.forceDestroy);
 route.get('/:slug', coursesController.show);
 
 module.exports = route;
